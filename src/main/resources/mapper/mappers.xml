@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.test.springTest.DAO.UserDao">
+
+<!--    <resultMap id="FriendApplyAdapter" type="com.syh.uit.friend_apply_service.model.FriendApply">
+        <result column="UNIX_TIMESTAMP(apply_time)" property="applyTime" />
+    </resultMap>-->
+
+    <select id="getUserByName"  resultType="org.test.springTest.model.User">
+        SELECT
+        username,age,sex
+        FROM
+        `user`
+        WHERE username=#{username}
+    </select>
+
+</mapper>
